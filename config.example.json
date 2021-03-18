@@ -1,0 +1,33 @@
+{
+    "notifications": {
+        "discordEnabled": true,
+        "discordWebhook": "https://discord.com/api/webhooks/CHANNEL/TOKEN",
+        "discordUsername": "backup-bot"
+    },
+    "destinationDevice": {
+        "type": "disk_uuid",
+        "diskUuid": {
+            "uuid": "6585b912-bf14-48b2-8548-470d22a58740"
+        },
+        "nfs": {
+            "host": "10.10.11.11",
+            "directory": "/volume1/Synology/Backup"
+        },
+        "mount_point": "/backup"
+    },
+    "protectedFolders": [
+        {
+            "source": "/var/lib/docker/volumes/",
+            "destination": "docker-volumes",
+            "exclusions": [
+                "*tvseries*",
+                "*movies*"
+            ]
+        },
+        {
+            "source": "/data/",
+            "destination": "data/",
+            "exclusions": []
+        }
+    ]
+}

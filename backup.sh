@@ -1,0 +1,1 @@
+python3 /home/renzo/code/backup/app.py
