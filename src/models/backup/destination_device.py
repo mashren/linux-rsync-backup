@@ -57,8 +57,8 @@ def parse_destination_device_config(config):
             nfs_params=BackupDestinationNFSParams(
                 host=config["nfs"]["host"],
                 directory=config["nfs"]["directory"],
-                mount_point=config["mount_point"]
-            )
+            ),
+            mount_point=config["mount_point"]
         )
     else:
         print("Unsupported backup device type")
